@@ -2,10 +2,10 @@
   "general": {
     "siteName": "Youth Medical Association",
     "acronym": "YMA",
-    "supportEmail": "contact@youthmed.org",
+    "supportEmail": "youthmedassociation.official@gmail.com",
     "socials": {
-      "instagram": "https://instagram.com/youthmed",
-      "linkedin": "https://linkedin.com/company/youthmed",
+      "instagram": "https://www.instagram.com/yma_canada/",
+      "linkedin": "https://www.linkedin.com/company/canada-youth-medical-association/",
       "twitter": "https://twitter.com/youthmed"
     },
     "forms": {
@@ -31,7 +31,7 @@
       "suffix": ""
     },
     "fundsRaised": {
-      "value": 34850,
+      "value": 43850,
       "label": "Funds Raised",
       "prefix": "$",
       "suffix": "+"
