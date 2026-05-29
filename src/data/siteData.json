@@ -86,33 +86,33 @@
   "team": {
     "coPresidents": [
       {
-        "name": "Sarah Chen",
+        "name": "Heth Maheswari",
         "role": "Co-President / Executive Director",
-        "school": "Stanford University",
-        "bio": "Sarah is a pre-med student majoring in Human Biology. She co-founded YMA in 2024 to create a national platform for medical case competitions."
+        "school": "St. Francix Xavier C. S. S.",
+        "bio": "Heth is an aspiring biomedical engineer with a passion for software and science. He co-founded YMA to create advanced medical case competitions and build the digital infrastructure for the platform."
       },
       {
-        "name": "David Okoye",
+        "name": "Adrian Monteiro",
         "role": "Co-President / Operations Director",
-        "school": "Johns Hopkins University",
-        "bio": "David studies Neuroscience and coordinates national event execution. He specializes in designing clinical patient case studies."
+        "school": "St. Francix Xavier C. S. S.",
+        "bio": "Adrian is an aspiring Medical Doctor focusing on clinical analysis. He manages national event operations and designs the medical case studies for competitions."
       },
       {
-        "name": "Maya Patel",
+        "name": "Ashwin Sankar",
         "role": "Co-President / Finance Director",
-        "school": "University of Pennsylvania",
-        "bio": "Maya oversees YMA's global health grants and financial accountability models, working directly with global health organizations."
+        "school": "St. Francix Xavier C. S. S.",
+        "bio": "Ashwin is an aspiring Neurosurgeon specializing in economics. He manages YMA's budget, financial tracking, and funding allocations to global healthcare charities."
       }
     ],
     "vicePresidents": [
-      { "name": "Ethan Vance", "role": "VP of Chapters", "school": "Yale University" },
-      { "name": "Chloe Jenkins", "role": "VP of Competitions", "school": "Harvard University" },
-      { "name": "Alexander Kim", "role": "VP of Finance", "school": "UC Berkeley" },
-      { "name": "Priyah Patel", "role": "VP of Marketing", "school": "Duke University" },
-      { "name": "Marcus Alvarez", "role": "VP of Technology", "school": "MIT" },
-      { "name": "Sofia Rossi", "role": "VP of Outreach", "school": "Columbia University" },
-      { "name": "Lucas Dubois", "role": "VP of Educational Resources", "school": "Brown University" },
-      { "name": "Isabella Zhang", "role": "VP of Public Relations", "school": "UCLA" }
+      { "name": "Sianne D'Souza", "role": "VP of Marketing", "school": "St. Francix Xavier C. S. S." },
+      { "name": "Mark Lou", "role": "VP of Marketing", "school": "St. Francix Xavier C. S. S." },
+      { "name": "Owen Lee", "role": "VP of Marketing", "school": "St. Francix Xavier C. S. S." },
+      { "name": "Leanne Serrano", "role": "VP of Outreach", "school": "Saint Joseph C. S. S." },
+      { "name": "Vyas Satish", "role": "VP of Operations", "school": "St. Francix Xavier C. S. S." },
+      { "name": "Raghav Gopal", "role": "VP of Logistics", "school": "St. Francix Xavier C. S. S." },
+      { "name": "Amrutha Gautham", "role": "VP of Educational Resources", "school": "Glen Forest High School" },
+      { "name": "Angad Singh Dhanjal", "role": "VP of Public Relations", "school": "Guelph Vocational Collegiate Institute" }
     ],
     "departments": [
       {
