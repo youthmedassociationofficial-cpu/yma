@@ -8,6 +8,12 @@
       "linkedin": "https://linkedin.com/company/youthmed",
       "twitter": "https://twitter.com/youthmed"
     },
+    "forms": {
+      "generalInquiryUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfD_Inquiry_Placeholder/viewform",
+      "eventRegistrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd_Registration_Placeholder/viewform",
+      "chapterStartupUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc_Chapters_Placeholder/viewform",
+      "sponsorshipRequestUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe_Sponsorship_Placeholder/viewform"
+    },
     "startupKitUrl": "/documents/YMA_Chapter_Startup_Kit.pdf",
     "sponsorshipPackageUrl": "/documents/YMA_Sponsorship_Package.pdf"
   },
@@ -60,36 +66,6 @@
       { "category": "Competitive Awards & Materials", "percentage": 10, "color": "#0F172A" },
       { "category": "Platform & Admin Operations", "percentage": 5, "color": "#64748B" }
     ],
-    "board": [
-      {
-        "name": "Sarah Chen",
-        "role": "Executive Director / President",
-        "school": "Stanford University",
-        "bio": "Sarah is a pre-med student majoring in Human Biology. She founded YMA in 2024 to create a national platform for medical case studies after organizing local public health workshops.",
-        "image": "sarah_chen"
-      },
-      {
-        "name": "David Okoye",
-        "role": "Director of Competitions",
-        "school": "Johns Hopkins University",
-        "bio": "David is studying Neuroscience and coordinates YMA's national competitive events. He designs clinical simulations and case prompts with our advisory panel.",
-        "image": "david_okoye"
-      },
-      {
-        "name": "Maya Patel",
-        "role": "Director of Finance & Impact",
-        "school": "University of Pennsylvania",
-        "bio": "Maya oversees all fundraising campaigns and transparency tracking. She manages relations with our international charity partners to verify the deployment of YMA funds.",
-        "image": "maya_patel"
-      },
-      {
-        "name": "Ethan Vance",
-        "role": "Director of Chapters & Outreach",
-        "school": "Yale University",
-        "bio": "Ethan drives chapter expansion globally. He supports over 40+ high school and undergraduate chapters with resources, toolkits, and guest lecture coordination.",
-        "image": "ethan_vance"
-      }
-    ],
     "advisors": [
       {
         "name": "Dr. Aris Thorne, MD",
@@ -107,6 +83,144 @@
       }
     ]
   },
+  "team": {
+    "coPresidents": [
+      {
+        "name": "Sarah Chen",
+        "role": "Co-President / Executive Director",
+        "school": "Stanford University",
+        "bio": "Sarah is a pre-med student majoring in Human Biology. She co-founded YMA in 2024 to create a national platform for medical case competitions."
+      },
+      {
+        "name": "David Okoye",
+        "role": "Co-President / Operations Director",
+        "school": "Johns Hopkins University",
+        "bio": "David studies Neuroscience and coordinates national event execution. He specializes in designing clinical patient case studies."
+      },
+      {
+        "name": "Maya Patel",
+        "role": "Co-President / Finance Director",
+        "school": "University of Pennsylvania",
+        "bio": "Maya oversees YMA's global health grants and financial accountability models, working directly with global health organizations."
+      }
+    ],
+    "vicePresidents": [
+      { "name": "Ethan Vance", "role": "VP of Chapters", "school": "Yale University" },
+      { "name": "Chloe Jenkins", "role": "VP of Competitions", "school": "Harvard University" },
+      { "name": "Alexander Kim", "role": "VP of Finance", "school": "UC Berkeley" },
+      { "name": "Priyah Patel", "role": "VP of Marketing", "school": "Duke University" },
+      { "name": "Marcus Alvarez", "role": "VP of Technology", "school": "MIT" },
+      { "name": "Sofia Rossi", "role": "VP of Outreach", "school": "Columbia University" },
+      { "name": "Lucas Dubois", "role": "VP of Educational Resources", "school": "Brown University" },
+      { "name": "Isabella Zhang", "role": "VP of Public Relations", "school": "UCLA" }
+    ],
+    "departments": [
+      {
+        "name": "Competitions Committee",
+        "members": [
+          { "name": "James Carter", "role": "Case Design Lead", "school": "Johns Hopkins University" },
+          { "name": "Emily Watson", "role": "Clinical Coordinator", "school": "Stanford University" },
+          { "name": "Aiden Gupta", "role": "Academic Quality Analyst", "school": "University of Chicago" },
+          { "name": "Olivia Martinez", "role": "Participant Liaison", "school": "UC Berkeley" },
+          { "name": "William Tan", "role": "Grading System Analyst", "school": "Yale University" },
+          { "name": "Sophia Lee", "role": "Diagnostics Director", "school": "UPenn" },
+          { "name": "Daniel Kim", "role": "Physiology Lead", "school": "Harvard University" },
+          { "name": "Mia Johnson", "role": "Bio-tech Case Writer", "school": "MIT" },
+          { "name": "Lucas Smith", "role": "Event Logistics Specialist", "school": "NYU" },
+          { "name": "Amelia Brown", "role": "Judge Coordinator", "school": "Duke University" },
+          { "name": "Ethan Davis", "role": "Case Auditor", "school": "UCLA" },
+          { "name": "Charlotte Miller", "role": "Score Verification Lead", "school": "Vanderbilt" },
+          { "name": "Henry Wilson", "role": "Simulation Specialist", "school": "Northwestern" },
+          { "name": "Harper Moore", "role": "Anatomy bowl Coordinator", "school": "Rice University" },
+          { "name": "Michael Taylor", "role": "Medical Advisory Liaison", "school": "Cornell University" },
+          { "name": "Evelyn Anderson", "role": "Committee Secretary", "school": "Dartmouth College" }
+        ]
+      },
+      {
+        "name": "Chapters Committee",
+        "members": [
+          { "name": "Noah Thomas", "role": "North America Regional Lead", "school": "Harvard University" },
+          { "name": "Abigail Garcia", "role": "Europe Regional Lead", "school": "Oxford University" },
+          { "name": "Mason Jackson", "role": "Asia Regional Lead", "school": "National University of Singapore" },
+          { "name": "Ella White", "role": "Chapter Onboarding Specialist", "school": "UC Berkeley" },
+          { "name": "Logan Harris", "role": "Startup Kit Coordinator", "school": "University of Michigan" },
+          { "name": "Avery Martin", "role": "High School Outreach Director", "school": "Stanford University" },
+          { "name": "Jack Thompson", "role": "Undergraduate Expansion Lead", "school": "UPenn" },
+          { "name": "Scarlett Martinez", "role": "Mentorship Program Lead", "school": "Johns Hopkins" },
+          { "name": "Jackson Robinson", "role": "Resources Library Manager", "school": "Yale University" },
+          { "name": "Chloe Clark", "role": "Chapter Audit Officer", "school": "University of Toronto" },
+          { "name": "Sebastian Rodriguez", "role": "Chapter Activities Lead", "school": "UT Austin" },
+          { "name": "Aria Lewis", "role": "Advisor Coordinator", "school": "Emory University" },
+          { "name": "Matthew Lee", "role": "Chapter Relations Officer", "school": "USC" },
+          { "name": "Grace Walker", "role": "Chapter Toolkits Designer", "school": "Boston University" },
+          { "name": "Joseph Hall", "role": "Outreach Specialist", "school": "UNC Chapel Hill" },
+          { "name": "Zoe Allen", "role": "Committee Secretary", "school": "University of Washington" }
+        ]
+      },
+      {
+        "name": "Marketing & Communications",
+        "members": [
+          { "name": "Samuel Young", "role": "Design Director", "school": "RISD / Brown" },
+          { "name": "Madison King", "role": "Social Media Manager", "school": "New York University" },
+          { "name": "Carter Wright", "role": "Brand Strategist", "school": "University of Southern California" },
+          { "name": "Lily Green", "role": "Copywriter", "school": "Northwestern University" },
+          { "name": "Ryan Baker", "role": "Content Creator", "school": "UC Berkeley" },
+          { "name": "Hannah Nelson", "role": "Newsletter Editor", "school": "Boston College" },
+          { "name": "Tyler Campbell", "role": "Video Producer", "school": "UCLA" },
+          { "name": "Natalie Carter", "role": "SEO Lead", "school": "University of Washington" },
+          { "name": "Dylan Mitchell", "role": "Graphic Designer", "school": "Carnegie Mellon" },
+          { "name": "Victoria Roberts", "role": "Press Relations Officer", "school": "Georgetown" },
+          { "name": "Christian Perez", "role": "Web Designer", "school": "MIT" },
+          { "name": "Lillian Turner", "role": "Community Engagement Lead", "school": "University of Virginia" },
+          { "name": "Jonathan Phillips", "role": "Email Marketing Specialist", "school": "University of Miami" },
+          { "name": "Samantha Parker", "role": "Marketing Auditor", "school": "Indiana University" },
+          { "name": "Aaron Evans", "role": "Media Planner", "school": "University of Oregon" },
+          { "name": "Stella Edwards", "role": "Communications Assistant", "school": "Syracuse University" }
+        ]
+      },
+      {
+        "name": "Finance & Operations",
+        "members": [
+          { "name": "Nathan Collins", "role": "Budget Analyst", "school": "University of Chicago" },
+          { "name": "Ellie Stewart", "role": "Donations Tracker", "school": "Stanford University" },
+          { "name": "Luke Morris", "role": "Compliance Officer", "school": "Yale University" },
+          { "name": "Audrey Rogers", "role": "Sponsorship Outreach Manager", "school": "UPenn" },
+          { "name": "Gabriel Reed", "role": "Event Treasurer", "school": "Columbia University" },
+          { "name": "Leah Cook", "role": "Procurement Officer", "school": "Johns Hopkins" },
+          { "name": "Owen Morgan", "role": "Logistics Coordinator", "school": "Georgia Tech" },
+          { "name": "Anna Bell", "role": "Accounting Associate", "school": "UC Berkeley" },
+          { "name": "Isaac Murphy", "role": "Platform Auditor", "school": "Harvard University" },
+          { "name": "Violet Bailey", "role": "Grants Coordinator", "school": "Duke University" },
+          { "name": "Julian Cooper", "role": "Risk Management Officer", "school": "NYU" },
+          { "name": "Hazel Ward", "role": "Corporate Relations Lead", "school": "Northwestern" },
+          { "name": "Levi Richardson", "role": "Fundraising Director", "school": "Vanderbilt" },
+          { "name": "Nora Cox", "role": "Operations Analyst", "school": "Rice University" },
+          { "name": "Eli Howard", "role": "Administrative Lead", "school": "Cornell University" },
+          { "name": "Bella Ward", "role": "Financial Assistant", "school": "UCLA" }
+        ]
+      },
+      {
+        "name": "Outreach & Advocacy",
+        "members": [
+          { "name": "Caleb Gomez", "role": "Public Health Campaign Lead", "school": "Stanford University" },
+          { "name": "Nova Peterson", "role": "Diversity & Inclusion Chair", "school": "Johns Hopkins University" },
+          { "name": "Wyatt Gray", "role": "Global Health Partnerships Lead", "school": "UPenn" },
+          { "name": "Stella Ramirez", "role": "Advocacy Coordinator", "school": "Harvard University" },
+          { "name": "Isaiah Bryant", "role": "High School Liaison", "school": "Yale University" },
+          { "name": "Paisley Henderson", "role": "Community Service Coordinator", "school": "UC Berkeley" },
+          { "name": "Landon Foster", "role": "Underserved Clinics Partner", "school": "Emory University" },
+          { "name": "Sadie Powell", "role": "Webinar Series Director", "school": "Duke University" },
+          { "name": "Hunter Long", "role": "Resource Distribution Officer", "school": "UCLA" },
+          { "name": "Savannah Patterson", "role": "Advocacy Outreach Specialist", "school": "NYU" },
+          { "name": "Gavin Hughes", "role": "Mentorship Recruiter", "school": "Vanderbilt" },
+          { "name": "Skylar Flores", "role": "Educational Equity Analyst", "school": "UT Austin" },
+          { "name": "Jaxon Washington", "role": "Event Mobilizer", "school": "University of Michigan" },
+          { "name": "Alice Butler", "role": "Speaker Recruiter", "school": "Cornell University" },
+          { "name": "Miles Simmons", "role": "Community Organizer", "school": "University of Washington" }
+        ]
+      }
+    ]
+  },
   "competitions": {
     "introduction": "YMA competitive events allow aspiring medical students to test their clinical reasoning, diagnostics, and bio-innovation skills. We offer three primary competitions annually, judged by medical board advisors and clinical professionals.",
     "schedule": [
@@ -117,7 +231,7 @@
         "status": "Upcoming",
         "tag": "Clinical Reasoning",
         "description": "Analyze a complex multi-system clinical patient presentation, diagnose the underlying conditions, and defend a comprehensive treatment plan before a panel of physicians.",
-        "registrationUrl": "/contact?form=register&event=case-comp-26",
+        "registrationUrl": "/contact?form=register",
         "rulebookUrl": "#"
       },
       {
@@ -127,7 +241,7 @@
         "status": "Registration Open",
         "tag": "Theory & Diagnostics",
         "description": "An intensive, fast-paced tournament testing core physiological systems, anatomical identification, and clinical diagnostic correlations.",
-        "registrationUrl": "/contact?form=register&event=anatomy-bowl-26",
+        "registrationUrl": "/contact?form=register",
         "rulebookUrl": "#"
       },
       {
@@ -137,7 +251,7 @@
         "status": "Planning Phase",
         "tag": "Medical Technology",
         "description": "Design a hardware or software prototype addressing a critical gap in global public health, telemedicine, or clinical diagnostic efficiency.",
-        "registrationUrl": "/contact?form=register&event=bio-innovate-27",
+        "registrationUrl": "/contact?form=register",
         "rulebookUrl": "#"
       }
     ],

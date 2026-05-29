@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import siteData from "@/data/siteData.json";
 
 export default function About() {
-  const board = siteData.about.board;
+  const board = siteData.team.coPresidents;
   const advisors = siteData.about.advisors;
   const financials = siteData.about.financials;
 
@@ -110,7 +110,7 @@ export default function About() {
           </div>
 
           {/* Board Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
             {board.map((member) => (
               <div
                 key={member.name}

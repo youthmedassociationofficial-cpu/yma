@@ -101,6 +101,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/team" className="hover:text-white transition-colors">
+                Our Team
+              </Link>
+            </li>
+            <li>
               <Link href="/competitions" className="hover:text-white transition-colors">
                 Competitions
               </Link>

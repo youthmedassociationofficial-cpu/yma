@@ -25,6 +25,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/about", label: "About Us", icon: Users },
+    { href: "/team", label: "Our Team", icon: Users },
     { href: "/competitions", label: "Competitions", icon: Trophy },
     { href: "/impact", label: "Our Impact", icon: Heart },
     { href: "/contact", label: "Contact", icon: Mail },

@@ -1,48 +1,71 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
-import { Mail, Compass, Award, Download, CheckCircle, Send, Landmark, ShieldCheck } from "lucide-react";
+import { Mail, Compass, Award, ExternalLink, Download, Landmark, ShieldCheck } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import siteData from "@/data/siteData.json";
 
-type TabType = "register" | "chapters" | "inquiry" | "sponsorship";
+export default function Contact() {
+  const forms = siteData.general.forms;
 
-function ContactPageContent() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  
-  const [activeTab, setActiveTab] = useState<TabType>("inquiry");
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Sync state with URL search params
-  useEffect(() => {
-    const formParam = searchParams.get("form") as TabType;
-    if (formParam && ["register", "chapters", "inquiry", "sponsorship"].includes(formParam)) {
-      setActiveTab(formParam);
+  const contactSections = [
+    {
+      title: "General Inquiry",
+      description: "Have general questions about our student-led non-profit, guest speaker schedules, or advisory panel opportunities?",
+      requirements: [
+        "Inquiries are reviewed by the Co-Presidents",
+        "Typical response time is 24-48 hours",
+        "Available for educators, students, and parents"
+      ],
+      buttonText: "Open Inquiry Form",
+      buttonUrl: forms.generalInquiryUrl,
+      icon: <Mail className="text-accent" size={24} />,
+      bg: "bg-teal-50/50 border-teal-100/50"
+    },
+    {
+      title: "Register for Competition",
+      description: "Ready to test your diagnostics or clinical reasoning skills? Sign up your high school or undergraduate team for our active season.",
+      requirements: [
+        "Teams of 1 to 4 members permitted",
+        "Requires student grade level verification",
+        "Guidelines and rules are sent upon signup"
+      ],
+      buttonText: "Open Registration Form",
+      buttonUrl: forms.eventRegistrationUrl,
+      icon: <Award className="text-accent" size={24} />,
+      bg: "bg-indigo-50/50 border-indigo-100/50"
+    },
+    {
+      title: "Start a School Chapter",
+      description: "Establish a registered extracurricular branch of the Youth Medical Association at your high school or university campus.",
+      requirements: [
+        "Access to pre-med study guides & guest lectures",
+        "Requires a faculty advisor email (optional)",
+        "Chapter Startup Kit PDF available below"
+      ],
+      buttonText: "Open Chapter Application",
+      buttonUrl: forms.chapterStartupUrl,
+      icon: <Compass className="text-accent" size={24} />,
+      bg: "bg-emerald-50/50 border-emerald-100/50",
+      pdfUrl: siteData.general.startupKitUrl,
+      pdfText: "Chapter Startup Kit (PDF)"
+    },
+    {
+      title: "Sponsorship & Partnerships",
+      description: "Partner with YMA to foster bioscience innovation and showcase your brand to thousands of future healthcare professionals.",
+      requirements: [
+        "Multiple tax-deductible contribution tiers",
+        "Judging roles and logo branding benefits",
+        "Sponsorship deck PDF available below"
+      ],
+      buttonText: "Submit Sponsor Request",
+      buttonUrl: forms.sponsorshipRequestUrl,
+      icon: <Landmark className="text-accent" size={24} />,
+      bg: "bg-slate-50 border-slate-200/50",
+      pdfUrl: siteData.general.sponsorshipPackageUrl,
+      pdfText: "Sponsorship Deck (PDF)"
     }
-  }, [searchParams]);
-
-  const handleTabChange = (tab: TabType) => {
-    setActiveTab(tab);
-    setIsSubmitted(false);
-    // Update URL query param without full page reload
-    router.replace(`/contact?form=${tab}`, { scroll: false });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsSubmitted(true);
-      (e.target as HTMLFormElement).reset();
-    }, 1200);
-  };
+  ];
 
   return (
     <>
@@ -59,297 +82,80 @@ function ContactPageContent() {
             Connect With YMA
           </h1>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto mt-3 leading-relaxed">
-            Select a category below to submit a registration, request resources, or download sponsorship information.
+            Select one of the departments below. Clicking a button will redirect you to our official Google Forms systems to submit your data.
           </p>
         </div>
       </section>
 
-      {/* Forms Area */}
+      {/* 4 Cards Grid Section */}
       <section className="py-20 bg-slate-50 border-b border-slate-100 font-sans">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           
-          {/* Tab Selector Links */}
-          <div className="flex flex-wrap gap-2.5 justify-center mb-10 border-b border-slate-200 pb-8">
-            <button
-              onClick={() => handleTabChange("inquiry")}
-              className={`px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all focus:outline-none flex items-center gap-2 ${
-                activeTab === "inquiry"
-                  ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
-                  : "bg-white border border-slate-200 text-slate-600 hover:bg-slate-150"
-              }`}
-            >
-              <Mail size={16} />
-              General Inquiry
-            </button>
-            <button
-              onClick={() => handleTabChange("register")}
-              className={`px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all focus:outline-none flex items-center gap-2 ${
-                activeTab === "register"
-                  ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
-                  : "bg-white border border-slate-200 text-slate-600 hover:bg-slate-150"
-              }`}
-            >
-              <Award size={16} />
-              Register for Event
-            </button>
-            <button
-              onClick={() => handleTabChange("chapters")}
-              className={`px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all focus:outline-none flex items-center gap-2 ${
-                activeTab === "chapters"
-                  ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
-                  : "bg-white border border-slate-200 text-slate-600 hover:bg-slate-150"
-              }`}
-            >
-              <Compass size={16} />
-              Start a Chapter
-            </button>
-            <button
-              onClick={() => handleTabChange("sponsorship")}
-              className={`px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all focus:outline-none flex items-center gap-2 ${
-                activeTab === "sponsorship"
-                  ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
-                  : "bg-white border border-slate-200 text-slate-600 hover:bg-slate-150"
-              }`}
-            >
-              <Landmark size={16} />
-              Sponsorship Packages
-            </button>
-          </div>
-
-          {/* Form Container */}
-          <div className="bg-white border border-slate-100 rounded-3xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
-            
-            {isSubmitted ? (
-              <div className="flex flex-col items-center justify-center text-center py-10 animate-scale-up">
-                <CheckCircle size={56} className="text-emerald-500 mb-6" />
-                <h3 className="text-2xl font-display font-bold text-primary mb-2">
-                  Request Submitted Successfully
-                </h3>
-                <p className="text-slate-500 text-sm max-w-sm leading-relaxed mb-8">
-                  Thank you for connecting with YMA! Our executive committee has received your details and will follow up with you via email within 48 hours.
-                </p>
-                <button
-                  onClick={() => setIsSubmitted(false)}
-                  className="font-sans font-semibold text-xs text-white bg-accent hover:bg-accent-dark px-6 py-3 rounded-xl transition-all shadow-md"
-                >
-                  Submit Another Form
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                
-                {/* 1. General Inquiries */}
-                {activeTab === "inquiry" && (
-                  <>
-                    <div className="border-b border-slate-100 pb-4 mb-2">
-                      <h2 className="text-xl font-display font-bold text-primary">General Inquiries</h2>
-                      <p className="text-slate-500 text-xs mt-0.5">Have questions about YMA, our events, or advisor opportunities? Let us know.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {contactSections.map((section, idx) => (
+              <div
+                key={idx}
+                className={`bg-white border rounded-3xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between ${section.bg}`}
+              >
+                <div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="p-3.5 rounded-2xl bg-white shadow-sm border border-slate-100">
+                      {section.icon}
                     </div>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Full Name</label>
-                        <input required type="text" placeholder="Sarah Jenkins" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Email Address</label>
-                        <input required type="email" placeholder="sarah@example.com" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                    </div>
+                    <h2 className="text-lg sm:text-xl font-display font-bold text-primary">
+                      {section.title}
+                    </h2>
+                  </div>
 
-                    <div className="flex flex-col gap-2">
-                      <label className="text-xs font-semibold text-slate-700">Subject</label>
-                      <input required type="text" placeholder="Advisory board question / partnership inquiry" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                    </div>
+                  <p className="text-slate-650 text-xs sm:text-sm leading-relaxed mb-6">
+                    {section.description}
+                  </p>
 
-                    <div className="flex flex-col gap-2">
-                      <label className="text-xs font-semibold text-slate-700">Message</label>
-                      <textarea required rows={5} placeholder="Write details about your question here..." className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all resize-none"></textarea>
-                    </div>
-                  </>
-                )}
+                  <div className="mb-8">
+                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block mb-3">
+                      Requirements & Details
+                    </span>
+                    <ul className="flex flex-col gap-2">
+                      {section.requirements.map((req, i) => (
+                        <li key={i} className="text-xs text-slate-600 flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0"></span>
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
 
-                {/* 2. Competition Registration */}
-                {activeTab === "register" && (
-                  <>
-                    <div className="border-b border-slate-100 pb-4 mb-2">
-                      <h2 className="text-xl font-display font-bold text-primary">Competition Registration</h2>
-                      <p className="text-slate-500 text-xs mt-0.5">Submit registration requests for active events. A payment link will be sent to the team captain.</p>
-                    </div>
+                <div className="flex flex-col gap-4 border-t border-slate-100/60 pt-6">
+                  <a
+                    href={section.buttonUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full font-sans font-semibold text-xs text-white bg-accent hover:bg-accent-dark py-3.5 rounded-xl transition-all shadow-md shadow-accent/15 flex items-center justify-center gap-2"
+                  >
+                    {section.buttonText}
+                    <ExternalLink size={14} />
+                  </a>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Team Captain Name</label>
-                        <input required type="text" placeholder="Sarah Jenkins" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Captain Email Address</label>
-                        <input required type="email" placeholder="sarah@example.com" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Select Competition</label>
-                        <select className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all cursor-pointer">
-                          {siteData.competitions.schedule.map((event) => (
-                            <option key={event.id} value={event.id}>
-                              {event.title}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">School / Affiliation</label>
-                        <input required type="text" placeholder="Stanford High School" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Number of Team Members</label>
-                        <select className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all cursor-pointer">
-                          <option value="1">1 (Individual competitor)</option>
-                          <option value="2">2 Members</option>
-                          <option value="3">3 Members</option>
-                          <option value="4">4 Members (Maximum)</option>
-                        </select>
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Competitor Grade Level</label>
-                        <select className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all cursor-pointer">
-                          <option value="highschool">High School Student</option>
-                          <option value="undergrad">Undergraduate pre-med student</option>
-                        </select>
-                      </div>
-                    </div>
-                  </>
-                )}
-
-                {/* 3. Start a Chapter */}
-                {activeTab === "chapters" && (
-                  <>
-                    <div className="border-b border-slate-100 pb-4 mb-2">
-                      <h2 className="text-xl font-display font-bold text-primary">Start a YMA Chapter</h2>
-                      <p className="text-slate-500 text-xs mt-0.5">Establish a registered extracurricular branch of YMA at your school and receive study guidelines.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Applicant Name</label>
-                        <input required type="text" placeholder="Sarah Jenkins" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Applicant Email Address</label>
-                        <input required type="email" placeholder="sarah@example.com" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Proposed School Name</label>
-                        <input required type="text" placeholder="Westlake High School" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Faculty Advisor Email (Optional)</label>
-                        <input type="email" placeholder="advisor@school.edu" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col gap-2">
-                      <label className="text-xs font-semibold text-slate-700">Why would you like to start a YMA chapter?</label>
-                      <textarea required rows={4} placeholder="Tell us briefly about your school's pre-med student interest..." className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all resize-none"></textarea>
-                    </div>
-                  </>
-                )}
-
-                {/* 4. Sponsorship Request */}
-                {activeTab === "sponsorship" && (
-                  <>
-                    <div className="border-b border-slate-100 pb-4 mb-2">
-                      <h2 className="text-xl font-display font-bold text-primary">Corporate Sponsorships</h2>
-                      <p className="text-slate-500 text-xs mt-0.5">Submit your organization&rsquo;s details to request custom package proposals and download package PDFs.</p>
-                    </div>
-
-                    <div className="p-5 rounded-2xl bg-teal-950/5 border border-teal-900/10 flex flex-col sm:flex-row items-center justify-between gap-4 mb-2">
-                      <div className="flex items-center gap-3 text-left">
-                        <div className="p-2.5 rounded-lg bg-teal-50 text-accent flex-shrink-0">
-                          <Landmark size={20} className="text-accent" />
-                        </div>
-                        <div>
-                          <span className="text-xs font-bold text-primary block">Sponsorship Package PDF</span>
-                          <span className="text-[10px] text-slate-400 font-medium">Includes pricing tiers, stats, and logo benefits (2.1 MB)</span>
-                        </div>
-                      </div>
-                      <a
-                        href={siteData.general.sponsorshipPackageUrl}
-                        download
-                        className="flex items-center gap-1 text-xs font-bold bg-accent hover:bg-accent-dark text-white px-4 py-2.5 rounded-xl transition-all shadow-sm focus:outline-none"
-                      >
-                        <Download size={14} />
-                        Download PDF
-                      </a>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Contact Person Name</label>
-                        <input required type="text" placeholder="Sarah Jenkins" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Contact Email Address</label>
-                        <input required type="email" placeholder="partner@company.com" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Company / Foundation Name</label>
-                        <input required type="text" placeholder="Apex Diagnostics Corp" className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all" />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <label className="text-xs font-semibold text-slate-700">Target Sponsor Level</label>
-                        <select className="px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:border-accent focus:bg-white transition-all cursor-pointer">
-                          <option value="gold">Gold Partner ($2,500)</option>
-                          <option value="silver">Silver Partner ($1,200)</option>
-                          <option value="bronze">Bronze Partner ($500)</option>
-                          <option value="other">Custom Philanthropic Grant</option>
-                        </select>
-                      </div>
-                    </div>
-                  </>
-                )}
-
-                {/* Submit Action */}
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="mt-4 font-sans font-semibold text-sm bg-accent hover:bg-accent-dark text-white py-3.5 rounded-xl transition-all shadow-md shadow-accent/15 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isLoading ? (
-                    <>
-                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Processing...
-                    </>
-                  ) : (
-                    <>
-                      <Send size={16} />
-                      Submit Request
-                    </>
+                  {section.pdfUrl && (
+                    <a
+                      href={section.pdfUrl}
+                      download
+                      className="text-xs font-bold text-slate-500 hover:text-primary flex items-center justify-center gap-1.5 transition-colors focus:outline-none"
+                    >
+                      <Download size={14} />
+                      {section.pdfText}
+                    </a>
                   )}
-                </button>
+                </div>
 
-              </form>
-            )}
-
+              </div>
+            ))}
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-2 text-xs text-slate-400 font-semibold uppercase">
+          <div className="mt-12 flex items-center justify-center gap-2 text-xs text-slate-400 font-semibold uppercase">
             <ShieldCheck size={16} className="text-accent" />
-            Secure SSL Submission & Privacy Guarantee
+            Verified Google Forms Security & Encryption
           </div>
 
         </div>
@@ -357,17 +163,5 @@ function ContactPageContent() {
 
       <Footer />
     </>
-  );
-}
-
-export default function Contact() {
-  return (
-    <Suspense fallback={
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="animate-pulse text-slate-500 font-sans">Loading contact details...</div>
-      </div>
-    }>
-      <ContactPageContent />
-    </Suspense>
   );
 }
