@@ -1,0 +1,250 @@
+{
+  "general": {
+    "siteName": "Youth Medical Association",
+    "acronym": "YMA",
+    "supportEmail": "contact@youthmed.org",
+    "socials": {
+      "instagram": "https://instagram.com/youthmed",
+      "linkedin": "https://linkedin.com/company/youthmed",
+      "twitter": "https://twitter.com/youthmed"
+    },
+    "startupKitUrl": "/documents/YMA_Chapter_Startup_Kit.pdf",
+    "sponsorshipPackageUrl": "/documents/YMA_Sponsorship_Package.pdf"
+  },
+  "metrics": {
+    "studentsImpacted": {
+      "value": 15280,
+      "label": "Students Impacted",
+      "prefix": "",
+      "suffix": "+"
+    },
+    "competitions": {
+      "value": 14,
+      "label": "Competitions Held",
+      "prefix": "",
+      "suffix": ""
+    },
+    "fundsRaised": {
+      "value": 34850,
+      "label": "Funds Raised",
+      "prefix": "$",
+      "suffix": "+"
+    }
+  },
+  "home": {
+    "heroTitle": "The Future of Medicine, Led by Youth",
+    "heroSubtitle": "Empowering the next generation of medical professionals through premium competitive events, high-impact resources, and global healthcare fundraising.",
+    "ctaRegister": "Register for Next Event",
+    "ctaChapters": "Explore Chapters"
+  },
+  "about": {
+    "mission": "To inspire, educate, and mobilize students toward careers in healthcare and medicine, while driving high-impact fundraising for global health equity.",
+    "vision": "A global community of young medical innovators, advocates, and leaders working together to break down barriers in medical education and healthcare delivery.",
+    "values": [
+      {
+        "title": "Academic Excellence",
+        "description": "Fostering rigorous research, critical analysis, and hands-on learning in the biological and medical sciences."
+      },
+      {
+        "title": "Global Compassion",
+        "description": "Directing student talent and energy toward real-world healthcare disparities and humanitarian aid."
+      },
+      {
+        "title": "Inclusive Leadership",
+        "description": "Providing equitable access to medical extracurriculars, mentorship, and leadership roles for all students."
+      }
+    ],
+    "financialStatement": "At YMA, transparency is a core value. We ensure that the maximum amount of every dollar raised goes directly to clinical care, medical supply distribution, and healthcare research through our partner organizations. We maintain a zero-compensation policy for our student board.",
+    "financials": [
+      { "category": "Direct Charity Grants", "percentage": 85, "color": "#0D9488" },
+      { "category": "Competitive Awards & Materials", "percentage": 10, "color": "#0F172A" },
+      { "category": "Platform & Admin Operations", "percentage": 5, "color": "#64748B" }
+    ],
+    "board": [
+      {
+        "name": "Sarah Chen",
+        "role": "Executive Director / President",
+        "school": "Stanford University",
+        "bio": "Sarah is a pre-med student majoring in Human Biology. She founded YMA in 2024 to create a national platform for medical case studies after organizing local public health workshops.",
+        "image": "sarah_chen"
+      },
+      {
+        "name": "David Okoye",
+        "role": "Director of Competitions",
+        "school": "Johns Hopkins University",
+        "bio": "David is studying Neuroscience and coordinates YMA's national competitive events. He designs clinical simulations and case prompts with our advisory panel.",
+        "image": "david_okoye"
+      },
+      {
+        "name": "Maya Patel",
+        "role": "Director of Finance & Impact",
+        "school": "University of Pennsylvania",
+        "bio": "Maya oversees all fundraising campaigns and transparency tracking. She manages relations with our international charity partners to verify the deployment of YMA funds.",
+        "image": "maya_patel"
+      },
+      {
+        "name": "Ethan Vance",
+        "role": "Director of Chapters & Outreach",
+        "school": "Yale University",
+        "bio": "Ethan drives chapter expansion globally. He supports over 40+ high school and undergraduate chapters with resources, toolkits, and guest lecture coordination.",
+        "image": "ethan_vance"
+      }
+    ],
+    "advisors": [
+      {
+        "name": "Dr. Aris Thorne, MD",
+        "role": "Clinical Advisory Chair",
+        "affiliation": "Associate Professor of Pediatrics, Boston Children's Hospital",
+        "bio": "Dr. Thorne advises on competition case validity and provides educational mentorship to the executive board.",
+        "image": "dr_thorne"
+      },
+      {
+        "name": "Dr. Helen Vance, PhD",
+        "role": "Educational Consultant",
+        "affiliation": "Director of Bioscience Education, Stanford Medicine",
+        "bio": "Dr. Vance ensures YMA curriculum guidelines align with introductory university-level medical coursework.",
+        "image": "dr_helen_vance"
+      }
+    ]
+  },
+  "competitions": {
+    "introduction": "YMA competitive events allow aspiring medical students to test their clinical reasoning, diagnostics, and bio-innovation skills. We offer three primary competitions annually, judged by medical board advisors and clinical professionals.",
+    "schedule": [
+      {
+        "id": "case-comp-26",
+        "title": "National Medical Case Competition",
+        "date": "November 14-16, 2026",
+        "status": "Upcoming",
+        "tag": "Clinical Reasoning",
+        "description": "Analyze a complex multi-system clinical patient presentation, diagnose the underlying conditions, and defend a comprehensive treatment plan before a panel of physicians.",
+        "registrationUrl": "/contact?form=register&event=case-comp-26",
+        "rulebookUrl": "#"
+      },
+      {
+        "id": "anatomy-bowl-26",
+        "title": "National Anatomy & Physiology Bowl",
+        "date": "February 20-22, 2027",
+        "status": "Registration Open",
+        "tag": "Theory & Diagnostics",
+        "description": "An intensive, fast-paced tournament testing core physiological systems, anatomical identification, and clinical diagnostic correlations.",
+        "registrationUrl": "/contact?form=register&event=anatomy-bowl-26",
+        "rulebookUrl": "#"
+      },
+      {
+        "id": "bio-innovate-27",
+        "title": "Bio-Innovation & Health Summit",
+        "date": "May 15-17, 2027",
+        "status": "Planning Phase",
+        "tag": "Medical Technology",
+        "description": "Design a hardware or software prototype addressing a critical gap in global public health, telemedicine, or clinical diagnostic efficiency.",
+        "registrationUrl": "/contact?form=register&event=bio-innovate-27",
+        "rulebookUrl": "#"
+      }
+    ],
+    "winners": [
+      {
+        "event": "2025 National Case Competition",
+        "team": "Team CardioPulse",
+        "school": "UC Berkeley",
+        "project": "Atypical Cardiac Presentation in Geriatric Patients",
+        "description": "Formulated a multi-drug diagnostic protocol for asymptomatic coronary thrombosis in high-risk demographics, winning first place out of 230 teams.",
+        "caseStudyUrl": "#"
+      },
+      {
+        "event": "2025 Bio-Innovation Summit",
+        "team": "Apex Diagnostics",
+        "school": "Stuyvesant High School",
+        "project": "Low-Cost Microfluidic Paper Diagnostics for Rural Clinics",
+        "description": "Created a functional, dry-reagent paper assay capable of diagnosing bacterial vs. viral infections for less than $0.15 per test card.",
+        "caseStudyUrl": "#"
+      }
+    ]
+  },
+  "impact": {
+    "introduction": "We channel student-led engagement into direct global change. Every competition entry fee and corporate sponsorship contributes to our global health fund, distributed directly to validated healthcare initiatives.",
+    "partners": [
+      {
+        "name": "Doctors Without Borders",
+        "logoUrl": "msf",
+        "description": "Funding emergency mobile health clinics in remote zones facing disease outbreaks and surgical shortages.",
+        "fundsAllocated": 14500
+      },
+      {
+        "name": "Local Pediatric Care Funds",
+        "logoUrl": "childrens_hospital",
+        "description": "Providing advanced diagnostic monitors and therapeutic toys to local children's hospital oncology wards.",
+        "fundsAllocated": 10350
+      },
+      {
+        "name": "UNICEF Child Health Initatives",
+        "logoUrl": "unicef",
+        "description": "Sponsoring childhood vaccination campaigns and clean water access in rural school districts.",
+        "fundsAllocated": 10000
+      }
+    ],
+    "mapRegions": [
+      {
+        "id": "region-na",
+        "name": "North America",
+        "amount": 10350,
+        "charity": "Local Pediatric Oncology Clinics",
+        "coordinates": { "x": "20%", "y": "30%" }
+      },
+      {
+        "id": "region-sa",
+        "name": "Central & South America",
+        "amount": 5000,
+        "charity": "Red Cross Disaster Health Response",
+        "coordinates": { "x": "32%", "y": "65%" }
+      },
+      {
+        "id": "region-africa",
+        "name": "Sub-Saharan Africa",
+        "amount": 12500,
+        "charity": "Doctors Without Borders Mobile Clinics",
+        "coordinates": { "x": "52%", "y": "62%" }
+      },
+      {
+        "id": "region-asia",
+        "name": "South & East Asia",
+        "amount": 7000,
+        "charity": "UNICEF Immunization Campaigns",
+        "coordinates": { "x": "72%", "y": "45%" }
+      }
+    ]
+  },
+  "sponsorship": {
+    "introduction": "Partner with YMA to foster pre-medical innovation and showcase your brand to thousands of future healthcare professionals, researchers, and university leaders.",
+    "tiers": [
+      {
+        "name": "Bronze Partner",
+        "price": "$500",
+        "features": [
+          "Logo displayed on our competition pages",
+          "Acknowledge in the event opening ceremony",
+          "Distributed digital handouts in registration packets"
+        ]
+      },
+      {
+        "name": "Silver Partner",
+        "price": "$1,200",
+        "features": [
+          "All Bronze benefits",
+          "Dedicated logo spot in the email newsletters",
+          "Invitation to host a 15-minute webinar during summits",
+          "Resume booklet access of participants"
+        ]
+      },
+      {
+        "name": "Gold Partner",
+        "price": "$2,500",
+        "features": [
+          "All Silver benefits",
+          "Premium logo placement on homepage and event banners",
+          "Named sponsor of a specific competition category (e.g. Physiology Track)",
+          "Prominent panel judging role"
+        ]
+      }
+    ]
+  }
+}
