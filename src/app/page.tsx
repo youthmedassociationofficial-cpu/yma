@@ -26,9 +26,13 @@ export default function Home() {
           className="object-cover object-center"
           priority
         />
-        {/* Dark overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/75 to-slate-950/50"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30"></div>
+        {/* Stunning Scrim Gradient Overlays */}
+        {/* 1. Deep linear scrim fading horizontally to guarantee high text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-transparent"></div>
+        {/* 2. Vertical vignette for atmospheric depth and smooth blending */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30"></div>
+        {/* 3. Luminous teal brand radial glow behind the text layout */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_45%,rgba(13,148,136,0.25),transparent_50%)]"></div>
 
         <div className="max-w-7xl mx-auto px-6 sm:px-10 relative z-10 py-28 sm:py-36 w-full">
           <div className="max-w-2xl">
@@ -185,7 +189,7 @@ export default function Home() {
             {upcomingEvents.map((event) => (
               <div
                 key={event.id}
-                className="bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                className="bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:border-slate-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -209,7 +213,7 @@ export default function Home() {
                   </span>
                   <Link
                     href={`/contact?form=register&event=${event.id}`}
-                    className="font-sans font-semibold text-xs text-white bg-accent hover:bg-accent-dark px-4.5 py-2.5 rounded-lg transition-colors shadow-sm"
+                    className="font-sans font-semibold text-xs text-white bg-accent hover:bg-accent-dark hover:scale-[1.03] active:scale-[0.97] px-4.5 py-2.5 rounded-lg transition-all shadow-sm"
                   >
                     Register
                   </Link>

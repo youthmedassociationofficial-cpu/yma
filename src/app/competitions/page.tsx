@@ -83,7 +83,7 @@ export default function Competitions() {
 
                   {/* Card Content */}
                   <div className="w-full md:w-1/2 pl-8 md:pl-0">
-                    <div className="bg-slate-50/50 border border-slate-100 hover:border-slate-200 p-6 rounded-2xl hover:shadow-md transition-all duration-300">
+                    <div className="bg-slate-50/50 border border-slate-100 p-6 rounded-2xl hover:bg-white hover:border-slate-200 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                       
                       <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                         <span className="px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-teal-50 text-accent rounded-md border border-teal-100">
@@ -159,7 +159,7 @@ export default function Competitions() {
             {rulebooks.map((book) => (
               <div
                 key={book.title}
-                className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+                className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm hover:shadow-lg hover:border-slate-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               >
                 <div className="flex gap-4 items-start mb-6">
                   <div className="p-3 rounded-xl bg-teal-50 text-accent flex-shrink-0">
@@ -213,7 +213,7 @@ export default function Competitions() {
             {winners.map((win) => (
               <div
                 key={win.project}
-                className="bg-slate-50/50 border border-slate-100 rounded-3xl p-6 sm:p-8 hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                className="bg-slate-50/50 border border-slate-100 rounded-3xl p-6 sm:p-8 hover:bg-white hover:border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 border-b border-slate-100/60 pb-4">

@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Users2, Target, Eye, BarChart3, ShieldCheck, Download } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,6 +12,12 @@ export default function About() {
   const board = siteData.team.coPresidents;
   const advisors = siteData.about.advisors;
   const financials = siteData.about.financials;
+
+  const [failedImages, setFailedImages] = useState<Record<string, boolean>>({});
+
+  const handleImageError = (imageSrc: string) => {
+    setFailedImages((prev) => ({ ...prev, [imageSrc]: true }));
+  };
 
   return (
     <>
@@ -114,11 +122,22 @@ export default function About() {
             {board.map((member) => (
               <div
                 key={member.name}
-                className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center"
+                className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center"
               >
                 {/* SVG Avatar Placeholder */}
-                <div className="w-20 h-20 rounded-full bg-slate-100 border border-slate-200/50 mb-4 overflow-hidden flex items-center justify-center text-slate-400">
-                  <AvatarPlaceholder name={member.name} />
+                <div className="w-20 h-20 rounded-full bg-slate-100 border border-slate-200/50 mb-4 overflow-hidden flex items-center justify-center text-slate-400 relative">
+                  {member.image && !failedImages[member.image] ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      sizes="80px"
+                      className="object-cover"
+                      onError={() => handleImageError(member.image)}
+                    />
+                  ) : (
+                    <AvatarPlaceholder name={member.name} />
+                  )}
                 </div>
                 <h3 className="font-display font-bold text-primary text-base leading-tight">
                   {member.name}
@@ -151,10 +170,21 @@ export default function About() {
               {advisors.map((advisor) => (
                 <div
                   key={advisor.name}
-                  className="bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5"
+                  className="bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm hover:border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5"
                 >
-                  <div className="w-16 h-16 rounded-full bg-slate-100 border border-slate-200/50 flex-shrink-0 flex items-center justify-center text-slate-400">
-                    <AvatarPlaceholder name={advisor.name} />
+                  <div className="w-16 h-16 rounded-full bg-slate-100 border border-slate-200/50 flex-shrink-0 flex items-center justify-center text-slate-400 relative">
+                    {advisor.image && !failedImages[advisor.image] ? (
+                      <Image
+                        src={advisor.image}
+                        alt={advisor.name}
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                        onError={() => handleImageError(advisor.image)}
+                      />
+                    ) : (
+                      <AvatarPlaceholder name={advisor.name} />
+                    )}
                   </div>
                   <div>
                     <h3 className="font-display font-bold text-primary text-base">

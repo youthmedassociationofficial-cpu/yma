@@ -13,6 +13,11 @@ export default function Team() {
   const departments = siteData.team.departments;
 
   const [activeDept, setActiveDept] = useState(0);
+  const [failedImages, setFailedImages] = useState<Record<string, boolean>>({});
+
+  const handleImageError = (imageSrc: string) => {
+    setFailedImages((prev) => ({ ...prev, [imageSrc]: true }));
+  };
 
   return (
     <>
@@ -53,16 +58,17 @@ export default function Team() {
             {coPresidents.map((member) => (
               <div
                 key={member.name}
-                className="bg-slate-50/50 border border-slate-100 rounded-3xl p-6 sm:p-8 hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center"
+                className="bg-slate-50/50 border border-slate-100 rounded-3xl p-6 sm:p-8 hover:bg-white hover:border-slate-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
               >
                 <div className="w-24 h-24 rounded-full bg-slate-100 border-2 border-slate-200/50 mb-5 flex items-center justify-center text-slate-400 overflow-hidden relative">
-                  {member.image ? (
+                  {member.image && !failedImages[member.image] ? (
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
                       sizes="96px"
                       className="object-cover"
+                      onError={() => handleImageError(member.image)}
                     />
                   ) : (
                     <AvatarPlaceholder name={member.name} />
@@ -108,16 +114,17 @@ export default function Team() {
             {vicePresidents.map((vp) => (
               <div
                 key={vp.name}
-                className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4"
+                className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:border-slate-200 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-4"
               >
                 <div className="w-14 h-14 rounded-full bg-slate-100 border border-slate-200/50 flex-shrink-0 flex items-center justify-center text-slate-400 overflow-hidden relative">
-                  {vp.image ? (
+                  {vp.image && !failedImages[vp.image] ? (
                     <Image
                       src={vp.image}
                       alt={vp.name}
                       fill
                       sizes="56px"
                       className="object-cover"
+                      onError={() => handleImageError(vp.image)}
                     />
                   ) : (
                     <AvatarPlaceholder name={vp.name} />
@@ -162,10 +169,10 @@ export default function Team() {
               <button
                 key={idx}
                 onClick={() => setActiveDept(idx)}
-                className={`px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all focus:outline-none flex items-center gap-1.5 cursor-pointer ${
+                className={`px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 focus:outline-none flex items-center gap-1.5 cursor-pointer hover:scale-[1.02] active:scale-[0.98] ${
                   activeDept === idx
-                    ? "bg-slate-900 text-white shadow-md shadow-slate-900/10"
-                    : "bg-slate-50 border border-slate-100 text-slate-650 hover:bg-slate-100"
+                    ? "bg-slate-900 text-white shadow-md shadow-slate-900/15"
+                    : "bg-slate-50 border border-slate-100 text-slate-650 hover:bg-slate-100 hover:border-slate-200 hover:shadow-sm"
                 }`}
               >
                 {dept.name}
@@ -191,7 +198,7 @@ export default function Team() {
               {departments[activeDept].members.map((member, i) => (
                 <div
                   key={i}
-                  className="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-slate-200 transition-all flex flex-col justify-center h-28"
+                  className="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:-translate-y-1 hover:border-slate-200 hover:shadow-md transition-all duration-300 flex flex-col justify-center h-28"
                 >
                   <h4 className="font-display font-bold text-slate-900 text-xs sm:text-sm leading-snug">
                     {member.name}

@@ -35,9 +35,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-500 ${
         isScrolled
-          ? "glass-panel shadow-sm border-b border-slate-200/50 py-3"
+          ? "bg-white/75 backdrop-blur-md shadow-sm border-b border-slate-200/40 py-2.5"
           : "bg-transparent py-5"
       }`}
     >
@@ -73,13 +73,13 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-sans font-medium text-sm flex items-center gap-1.5 transition-colors duration-200 focus:outline-none ${
+                className={`font-sans font-medium text-sm flex items-center gap-1.5 transition-all duration-300 focus:outline-none relative py-1 ${
                   active
-                    ? "text-accent border-b-2 border-accent pb-1"
-                    : "text-slate-600 hover:text-primary hover:border-b-2 hover:border-slate-300 pb-1"
+                    ? "text-accent after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:scale-x-100 after:bg-accent"
+                    : "text-slate-600 hover:text-primary after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-accent/70 after:transition-transform after:duration-300 hover:after:scale-x-100"
                 }`}
               >
-                <Icon size={14} className={active ? "text-accent" : "text-slate-400"} />
+                <Icon size={14} className={active ? "text-accent" : "text-slate-400/80"} />
                 {link.label}
               </Link>
             );
