@@ -86,23 +86,23 @@
   "team": {
     "coPresidents": [
       {
-        "name": "Heth Maheswari",
-        "role": "Co-President / Executive Director",
-        "school": "St. Francix Xavier C. S. S.",
-        "bio": "Heth is an aspiring biomedical engineer with a passion for software and science. He co-founded YMA to create advanced medical case competitions and build the digital infrastructure for the platform.",
-        "image": "/assets/team/heth.jpg"
-      },
-      {
         "name": "Adrian Monteiro",
         "role": "Co-President / Operations Director",
-        "school": "St. Francix Xavier C. S. S.",
+        "school": "St. Francis Xavier C. S. S.",
         "bio": "Adrian is an aspiring Medical Doctor focusing on clinical analysis. He manages national event operations and designs the medical case studies for competitions.",
         "image": "/assets/team/adrian.jpg"
       },
       {
+        "name": "Heth Maheswari",
+        "role": "Co-President / Executive Director",
+        "school": "St. Francis Xavier C. S. S.",
+        "bio": "Heth is an aspiring biomedical engineer with a passion for software and science. He co-founded YMA to create advanced medical case competitions and build the digital infrastructure for the platform.",
+        "image": "/assets/team/heth.jpg"
+      },
+      {
         "name": "Ashwin Sankar",
         "role": "Co-President / Finance Director",
-        "school": "St. Francix Xavier C. S. S.",
+        "school": "St. Francis Xavier C. S. S.",
         "bio": "Ashwin is an aspiring Neurosurgeon specializing in economics. He manages YMA's budget, financial tracking, and funding allocations to global healthcare charities.",
         "image": "/assets/team/ashwin.jpg"
       }
