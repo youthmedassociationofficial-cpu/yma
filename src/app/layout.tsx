@@ -21,10 +21,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png" },
+      { url: "/assets/logo.png", type: "image/png" },
     ],
-    apple: { url: "/icon.png", type: "image/png" },
+    apple: { url: "/assets/logo.png", type: "image/png" },
   },
 };
 

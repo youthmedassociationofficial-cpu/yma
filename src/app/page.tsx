@@ -15,62 +15,55 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-slate-950 text-white py-20 sm:py-28 border-b border-slate-900">
-        {/* Decorative Grid and Glow Backgrounds */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35"></div>
-        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-accent/15 blur-[120px] pointer-events-none"></div>
+      {/* Hero Section — Full-bleed background image */}
+      <section className="relative overflow-hidden bg-slate-950 text-white min-h-[85vh] flex items-center">
+        {/* Background Image */}
+        <Image
+          src="/assets/yma_comp.png"
+          alt="YMA Competition event"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+          priority
+        />
+        {/* Dark overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/75 to-slate-950/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30"></div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Left Text Column */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-teal-400 text-xs font-semibold tracking-wider uppercase mb-6 animate-fade-in shadow-inner">
-              <ActivityIcon className="animate-pulse text-accent" />
-              Empowering Future Healthcare Leaders
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 relative z-10 py-28 sm:py-36 w-full">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-teal-300 text-xs font-semibold tracking-wider uppercase mb-8 animate-fade-in">
+              <ActivityIcon className="animate-pulse text-teal-300" />
+              Student-Led Medical Non-Profit
             </div>
 
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-[1.1] mb-6 animate-slide-up">
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-[3.75rem] tracking-tight text-white leading-[1.08] mb-6 animate-slide-up drop-shadow-lg">
               {siteData.home.heroTitle}
             </h1>
 
-            <p className="font-sans text-base sm:text-lg text-slate-400 leading-relaxed mb-8 max-w-xl animate-slide-up">
+            <p className="font-sans text-base sm:text-lg text-slate-200/80 leading-relaxed mb-10 max-w-xl animate-slide-up">
               {siteData.home.heroSubtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 animate-slide-up w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-start gap-4 animate-slide-up">
               <Link
                 href="/contact?form=register"
-                className="w-full sm:w-auto font-sans font-semibold text-sm bg-accent hover:bg-accent-dark text-white px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:-translate-y-0.5 active:translate-y-0 text-center"
+                className="font-sans font-bold text-sm uppercase tracking-widest bg-white text-slate-950 px-10 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 text-center"
               >
-                {siteData.home.ctaRegister}
+                Sign Up Today
               </Link>
               <Link
-                href="/contact?form=chapters"
-                className="w-full sm:w-auto font-sans font-semibold text-sm bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white px-8 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 active:translate-y-0 text-center"
+                href="/about"
+                className="font-sans font-semibold text-sm bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-lg transition-all hover:-translate-y-0.5 active:translate-y-0 text-center"
               >
-                {siteData.home.ctaChapters}
+                Learn More
               </Link>
             </div>
           </div>
-
-          {/* Right Image Showcase Column */}
-          <div className="lg:col-span-5 w-full flex items-center justify-center animate-fade-in">
-            <div className="relative w-full aspect-[4/5] sm:max-w-md rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl shadow-accent/5 hover:border-slate-750 transition-all duration-300">
-              <Image
-                src="/assets/yma_comp.png"
-                alt="YMA Active Competition Guidelines and Flyer"
-                fill
-                sizes="(max-width: 768px) 100vw, 400px"
-                className="object-cover object-center"
-                priority
-              />
-              {/* Overlay shading to make it feel clinical */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent pointer-events-none"></div>
-            </div>
-          </div>
-
         </div>
+
+        {/* Bottom fade to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
       {/* Metrics Section */}

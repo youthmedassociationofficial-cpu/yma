@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Users2, Compass, Award, Building, Landmark, ChevronRight, GraduationCap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -54,8 +55,18 @@ export default function Team() {
                 key={member.name}
                 className="bg-slate-50/50 border border-slate-100 rounded-3xl p-6 sm:p-8 hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center"
               >
-                <div className="w-20 h-20 rounded-full bg-slate-100 border border-slate-200/50 mb-5 flex items-center justify-center text-slate-400">
-                  <AvatarPlaceholder name={member.name} />
+                <div className="w-24 h-24 rounded-full bg-slate-100 border-2 border-slate-200/50 mb-5 flex items-center justify-center text-slate-400 overflow-hidden relative">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <AvatarPlaceholder name={member.name} />
+                  )}
                 </div>
                 <h3 className="font-display font-bold text-primary text-lg">
                   {member.name}
@@ -99,8 +110,18 @@ export default function Team() {
                 key={vp.name}
                 className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4"
               >
-                <div className="w-12 h-12 rounded-full bg-slate-100 border border-slate-200/50 flex-shrink-0 flex items-center justify-center text-slate-400">
-                  <AvatarPlaceholder name={vp.name} />
+                <div className="w-14 h-14 rounded-full bg-slate-100 border border-slate-200/50 flex-shrink-0 flex items-center justify-center text-slate-400 overflow-hidden relative">
+                  {vp.image ? (
+                    <Image
+                      src={vp.image}
+                      alt={vp.name}
+                      fill
+                      sizes="56px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <AvatarPlaceholder name={vp.name} />
+                  )}
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-primary text-sm leading-snug">
