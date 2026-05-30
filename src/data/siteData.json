@@ -108,12 +108,12 @@
       }
     ],
     "vicePresidents": [
-      { "name": "Sianne D'Souza", "role": "VP of Marketing", "school": "St. Francix Xavier C. S. S.", "image": "/assets/team/sianne.jpg" },
-      { "name": "Mark Lou", "role": "VP of Marketing", "school": "St. Francix Xavier C. S. S.", "image": "/assets/team/mark.jpg" },
-      { "name": "Owen Lee", "role": "VP of Marketing", "school": "St. Francix Xavier C. S. S.", "image": "/assets/team/owen.jpg" },
+      { "name": "Sianne D'Souza", "role": "VP of Marketing", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/sianne.jpg" },
+      { "name": "Mark Lou", "role": "Chapter Manager", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/mark.jpg" },
+      { "name": "Owen Lee", "role": "VP of Marketing", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/owen.jpg" },
       { "name": "Leanne Serrano", "role": "VP of Outreach", "school": "Saint Joseph C. S. S.", "image": "/assets/team/leanne.jpg" },
-      { "name": "Vyas Satish", "role": "VP of Operations", "school": "St. Francix Xavier C. S. S.", "image": "/assets/team/vyas.jpg" },
-      { "name": "Raghav Gopal", "role": "VP of Logistics", "school": "St. Francix Xavier C. S. S.", "image": "/assets/team/raghav.jpg" },
+      { "name": "Vyas Satish", "role": "VP of Operations", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/vyas.jpg" },
+      { "name": "Raghav Gopal", "role": "VP of Logistics", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/raghav.jpg" },
       { "name": "Amrutha Gautam", "role": "VP of Educational Resources", "school": "Glen Forest High School", "image": "/assets/team/amrutha.jpg" },
       { "name": "Angad Singh Dhanjal", "role": "VP of Public Relations", "school": "Guelph Vocational Collegiate Institute", "image": "/assets/team/angad.jpg" }
     ],
