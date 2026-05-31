@@ -27,8 +27,8 @@ export default function Home() {
           priority
         />
         {/* Stunning Scrim Gradient Overlays */}
-        {/* 1. Deep linear scrim fading horizontally to guarantee high text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-transparent"></div>
+        {/* 1. Deep linear scrim fading horizontally on desktops, and vertically on mobile/portrait screens */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/95 via-slate-950/85 to-slate-950/60 sm:bg-gradient-to-r sm:from-slate-950 sm:via-slate-950/85 sm:to-transparent"></div>
         {/* 2. Vertical vignette for atmospheric depth and smooth blending */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30"></div>
         {/* 3. Luminous teal brand radial glow behind the text layout */}
@@ -49,16 +49,16 @@ export default function Home() {
               {siteData.home.heroSubtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-start gap-4 animate-slide-up">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 animate-slide-up w-full sm:w-auto">
               <Link
                 href="/contact?form=register"
-                className="font-sans font-bold text-sm uppercase tracking-widest bg-white text-slate-950 px-10 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 text-center"
+                className="w-full sm:w-auto font-sans font-bold text-sm uppercase tracking-widest bg-white text-slate-950 px-10 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 text-center"
               >
                 Sign Up Today
               </Link>
               <Link
                 href="/about"
-                className="font-sans font-semibold text-sm bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-lg transition-all hover:-translate-y-0.5 active:translate-y-0 text-center"
+                className="w-full sm:w-auto font-sans font-semibold text-sm bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-lg transition-all hover:-translate-y-0.5 active:translate-y-0 text-center"
               >
                 Learn More
               </Link>

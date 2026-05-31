@@ -95,7 +95,7 @@ export default function Contact() {
             {contactSections.map((section, idx) => (
               <div
                 key={idx}
-                className={`bg-white border rounded-3xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between ${section.bg}`}
+                className={`bg-white border rounded-3xl p-6 sm:p-8 hover:shadow-xl hover:border-slate-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between ${section.bg}`}
               >
                 <div>
                   <div className="flex items-center gap-4 mb-6">
@@ -131,7 +131,7 @@ export default function Contact() {
                     href={section.buttonUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full font-sans font-semibold text-xs text-white bg-accent hover:bg-accent-dark py-3.5 rounded-xl transition-all shadow-md shadow-accent/15 flex items-center justify-center gap-2"
+                    className="w-full font-sans font-semibold text-xs text-white bg-accent hover:bg-accent-dark hover:scale-[1.01] active:scale-[0.99] py-3.5 rounded-xl transition-all shadow-md shadow-accent/15 flex items-center justify-center gap-2"
                   >
                     {section.buttonText}
                     <ExternalLink size={14} />
