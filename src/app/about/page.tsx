@@ -126,13 +126,13 @@ export default function About() {
               >
                 {/* SVG Avatar Placeholder */}
                 <div className="w-20 h-20 rounded-full bg-slate-100 border border-slate-200/50 mb-4 overflow-hidden flex items-center justify-center text-slate-400 relative">
-                  {member.image && !failedImages[member.image] ? (
+                  {member.image && (member.image.startsWith('/') || member.image.startsWith('http')) && !failedImages[member.image] ? (
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
                       sizes="80px"
-                      className="object-cover"
+                      className="object-cover object-center"
                       onError={() => handleImageError(member.image)}
                     />
                   ) : (
@@ -173,13 +173,13 @@ export default function About() {
                   className="bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm hover:border-slate-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5"
                 >
                   <div className="w-16 h-16 rounded-full bg-slate-100 border border-slate-200/50 flex-shrink-0 flex items-center justify-center text-slate-400 relative">
-                    {advisor.image && !failedImages[advisor.image] ? (
+                    {advisor.image && (advisor.image.startsWith('/') || advisor.image.startsWith('http')) && !failedImages[advisor.image] ? (
                       <Image
                         src={advisor.image}
                         alt={advisor.name}
                         fill
                         sizes="64px"
-                        className="object-cover"
+                        className="object-cover object-center"
                         onError={() => handleImageError(advisor.image)}
                       />
                     ) : (

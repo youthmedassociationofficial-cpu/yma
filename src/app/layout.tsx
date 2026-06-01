@@ -38,9 +38,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${plusJakarta.variable} h-full antialiased`}
+      className={`${inter.variable} ${plusJakarta.variable} h-full antialiased overflow-x-hidden`}
     >
-      <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans">
+      <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans overflow-x-hidden">
         {children}
       </body>
     </html>
