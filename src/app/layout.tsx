@@ -15,7 +15,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Youth Medical Association (YMA) | Empowering Aspiring Medical Leaders",
   description: "YMA is a student-led non-profit dedicated to engaging students through medical case study competitions, bio-innovation summits, and fundraising for global health charities.",
-  keywords: "student medical competitions, high school medical clubs, youth medical association, bio-innovation, pre-med events, healthcare charities",
+  keywords: "student medical competitions, high school medical clubs, youth medical association, bio-innovation, pre-med events, healthcare charities, Heth Maheswari, Heth, Maheswari, YMA, Youth Medical Association Heth Maheswari",
   verification: {
     google: "qpUva6M78nLYCRNbsWlFNlLhfKELDXPkLzxlj6DDjQI",
   },
