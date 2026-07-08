@@ -13,7 +13,7 @@
       "eventRegistrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd_Registration_Placeholder/viewform",
       "chapterStartupUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc_Chapters_Placeholder/viewform",
       "sponsorshipRequestUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe_Sponsorship_Placeholder/viewform",
-      "careersApplicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfCareers_Placeholder/viewform"
+      "careersApplicationUrl": "https://forms.gle/zRY2TrbWwcXwUdyaA"
     },
     "startupKitUrl": "/documents/YMA_Chapter_Startup_Kit.pdf",
     "sponsorshipPackageUrl": "/documents/YMA_Sponsorship_Package.pdf"
@@ -374,10 +374,10 @@
     "introduction": "Join a team of passionate student leaders, pre-med innovators, and health advocates. We have open roles in various committees.",
     "roles": [
       {
-        "title": "Case Design Specialist",
-        "department": "Competitions Committee",
-        "description": "Research clinical case scenarios and write advanced case studies for national and regional student competitions.",
-        "requirements": "Strong background in biological sciences, critical analysis, and academic writing.",
+        "title": "Finance & Operations Associate",
+        "department": "Finance & Operations",
+        "description": "Manage financial operations and administrative tasks for the organization.",
+        "requirements": "Strong organizational skills, attention to detail, and basic accounting knowledge.",
         "type": "Volunteer (Remote)"
       },
       {
@@ -389,16 +389,9 @@
       },
       {
         "title": "Chapter Onboarding Associate",
-        "department": "Chapters Committee",
-        "description": "Guide new student founders through the chapter startup process, conducting training and auditing guidelines.",
-        "requirements": "Excellent communication, organization, and leadership skills.",
-        "type": "Volunteer (Remote)"
-      },
-      {
-        "title": "Outreach & Advocacy Lead",
         "department": "Outreach & Advocacy",
-        "description": "Engage high school and college chapters in medical volunteer initiatives and build partnerships with global health non-profits.",
-        "requirements": "Proactive outreach skills, experience in community organizing or fundraising.",
+        "description": "Plan events, manage chapter onboarding, and coordinate with new chapters to ensure smooth integration into the YMA network.",
+        "requirements": "Excellent communication, organization, and leadership skills.",
         "type": "Volunteer (Remote)"
       }
     ]
