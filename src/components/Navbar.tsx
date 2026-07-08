@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Heart, Trophy, Users, Mail, Compass } from "lucide-react";
+import { Menu, X, Heart, Trophy, Users, Mail, Compass, Briefcase, ArrowRight } from "lucide-react";
+import siteData from "@/data/siteData.json";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,19 +29,21 @@ export default function Navbar() {
     { href: "/team", label: "Our Team", icon: Users },
     { href: "/competitions", label: "Competitions", icon: Trophy },
     { href: "/impact", label: "Our Impact", icon: Heart },
+    { href: "/careers", label: "Careers", icon: Briefcase },
     { href: "/contact", label: "Contact", icon: Mail },
   ];
 
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-        isScrolled
-          ? "bg-white/75 backdrop-blur-md shadow-sm border-b border-slate-200/40 py-2.5"
-          : "bg-transparent py-5"
-      }`}
-    >
+    <div className="sticky top-0 z-50 w-full flex flex-col">
+      <header
+        className={`w-full transition-all duration-500 ${
+          isScrolled
+            ? "bg-white/75 backdrop-blur-md shadow-sm border-b border-slate-200/40 py-2.5"
+            : "bg-transparent py-5"
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo and Brand Name */}
         <Link href="/" className="flex items-center gap-3 group focus:outline-none">
@@ -65,7 +68,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => {
             const Icon = link.icon;
             const active = isActive(link.href);
@@ -150,6 +153,19 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </header>
+      </header>
+      {siteData.hiringBanner?.visible && !isOpen && (
+        <Link
+          href={siteData.hiringBanner.link}
+          className="group block bg-gradient-to-r from-accent to-accent-dark hover:from-accent-dark hover:to-accent text-white text-center py-2 px-6 text-[11px] sm:text-xs font-semibold tracking-wide transition-all duration-300 shadow-sm flex items-center justify-center gap-2 cursor-pointer border-b border-teal-850/10"
+        >
+          <span className="bg-white/20 text-white text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded tracking-wider animate-pulse">
+            Hiring
+          </span>
+          <span>{siteData.hiringBanner.text}</span>
+          <ArrowRight size={13} className="inline transition-transform duration-300 group-hover:translate-x-1" />
+        </Link>
+      )}
+    </div>
   );
 }

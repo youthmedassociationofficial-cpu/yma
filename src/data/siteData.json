@@ -12,7 +12,8 @@
       "generalInquiryUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfD_Inquiry_Placeholder/viewform",
       "eventRegistrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd_Registration_Placeholder/viewform",
       "chapterStartupUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc_Chapters_Placeholder/viewform",
-      "sponsorshipRequestUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe_Sponsorship_Placeholder/viewform"
+      "sponsorshipRequestUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe_Sponsorship_Placeholder/viewform",
+      "careersApplicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfCareers_Placeholder/viewform"
     },
     "startupKitUrl": "/documents/YMA_Chapter_Startup_Kit.pdf",
     "sponsorshipPackageUrl": "/documents/YMA_Sponsorship_Package.pdf"
@@ -361,6 +362,44 @@
           "Named sponsor of a specific competition category (e.g. Physiology Track)",
           "Prominent panel judging role"
         ]
+      }
+    ]
+  },
+  "hiringBanner": {
+    "text": "We're hiring! Join our executive board and committees today.",
+    "link": "/careers",
+    "visible": true
+  },
+  "careers": {
+    "introduction": "Join a team of passionate student leaders, pre-med innovators, and health advocates. We have open roles in various committees.",
+    "roles": [
+      {
+        "title": "Case Design Specialist",
+        "department": "Competitions Committee",
+        "description": "Research clinical case scenarios and write advanced case studies for national and regional student competitions.",
+        "requirements": "Strong background in biological sciences, critical analysis, and academic writing.",
+        "type": "Volunteer (Remote)"
+      },
+      {
+        "title": "Marketing & Media Coordinator",
+        "department": "Marketing & Communications",
+        "description": "Design visual assets and craft engaging copy to promote YMA competitive events and chapter milestones.",
+        "requirements": "Experience with Canva, Figma, and copywriting. Active presence on Instagram/LinkedIn.",
+        "type": "Volunteer (Remote)"
+      },
+      {
+        "title": "Chapter Onboarding Associate",
+        "department": "Chapters Committee",
+        "description": "Guide new student founders through the chapter startup process, conducting training and auditing guidelines.",
+        "requirements": "Excellent communication, organization, and leadership skills.",
+        "type": "Volunteer (Remote)"
+      },
+      {
+        "title": "Outreach & Advocacy Lead",
+        "department": "Outreach & Advocacy",
+        "description": "Engage high school and college chapters in medical volunteer initiatives and build partnerships with global health non-profits.",
+        "requirements": "Proactive outreach skills, experience in community organizing or fundraising.",
+        "type": "Volunteer (Remote)"
       }
     ]
   }
