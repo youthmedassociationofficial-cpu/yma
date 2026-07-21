@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { Users2, Compass, Award, Building, Landmark, ChevronRight, GraduationCap } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -105,41 +106,41 @@ export default function Team() {
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary mt-3">
               Vice Presidents
             </h2>
-            <p className="text-slate-500 text-sm mt-1">
-              Directors managing respective YMA administrative branches.
+            <p className="text-slate-500 text-sm mt-1 max-w-md mx-auto">
+              We are currently expanding our executive board. Explore open VP roles and submit your application today.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {vicePresidents.map((vp) => (
+            {vicePresidents.map((vp, idx) => (
               <div
-                key={vp.name}
-                className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:border-slate-200 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-4"
+                key={idx}
+                className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:border-slate-200 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full"
               >
-                <div className="w-14 h-14 rounded-full bg-slate-100 border border-slate-200/50 flex-shrink-0 flex items-center justify-center text-slate-400 overflow-hidden relative">
-                  {vp.image && !failedImages[vp.image] ? (
-                    <Image
-                      src={vp.image}
-                      alt={vp.name}
-                      fill
-                      sizes="56px"
-                      className="object-cover"
-                      onError={() => handleImageError(vp.image)}
-                    />
-                  ) : (
-                    <AvatarPlaceholder name={vp.name} />
-                  )}
-                </div>
                 <div>
-                  <h3 className="font-display font-bold text-primary text-sm leading-snug">
-                    {vp.name}
-                  </h3>
-                  <span className="text-accent text-[11px] font-semibold block mt-0.5">
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-teal-50 text-accent border border-teal-100 inline-flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+                      Now Hiring
+                    </span>
+                  </div>
+
+                  <h3 className="font-display font-bold text-primary text-base leading-snug mb-1">
                     {vp.role}
+                  </h3>
+                  <span className="text-slate-500 text-xs font-medium block">
+                    {vp.department}
                   </span>
-                  <span className="text-slate-400 text-[9px] uppercase font-bold tracking-wider block mt-1">
-                    {vp.school}
-                  </span>
+                </div>
+
+                <div className="mt-5 pt-4 border-t border-slate-100">
+                  <Link
+                    href="/careers"
+                    className="inline-flex items-center justify-center gap-1.5 w-full text-xs font-semibold text-accent hover:text-accent-dark bg-teal-50/60 hover:bg-teal-50 border border-teal-100/80 py-2 rounded-xl transition-all cursor-pointer"
+                  >
+                    Apply for Position
+                    <ChevronRight size={14} />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -150,7 +151,6 @@ export default function Team() {
       {/* General Committee Departments Directory */}
       <section className="py-20 bg-white font-sans">
         <div className="max-w-7xl mx-auto px-6">
-          
           <div className="text-center mb-12">
             <span className="text-xs font-semibold text-accent uppercase tracking-wider bg-teal-50 border border-teal-100 px-3 py-1 rounded-full">
               Committees
@@ -158,8 +158,8 @@ export default function Team() {
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary mt-3">
               Department Committees
             </h2>
-            <p className="text-slate-500 text-sm mt-1 max-w-sm mx-auto">
-              YMA general members and coordinators working in specific divisions.
+            <p className="text-slate-500 text-sm mt-1 max-w-md mx-auto">
+              All committee branches are actively recruiting student coordinators, analysts, and project leads.
             </p>
           </div>
 
@@ -176,44 +176,58 @@ export default function Team() {
                 }`}
               >
                 {dept.name}
-                <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${
-                  activeDept === idx ? "bg-accent text-white" : "bg-slate-200 text-slate-650"
-                }`}>
-                  {dept.members.length}
+                <span
+                  className={`text-[10px] px-2 py-0.5 rounded-md font-extrabold uppercase tracking-wider ${
+                    activeDept === idx ? "bg-accent text-white" : "bg-teal-50 text-accent border border-teal-100"
+                  }`}
+                >
+                  Now Hiring
                 </span>
               </button>
             ))}
           </div>
 
-          {/* Committee Member Grid */}
-          <div className="max-w-5xl mx-auto">
-            <h3 className="text-lg font-display font-bold text-slate-800 mb-6 flex items-center gap-2">
-              <Building size={18} className="text-accent" />
-              {departments[activeDept].name}
-              <ChevronRight size={16} className="text-slate-300" />
-              <span className="text-xs text-slate-400 font-semibold">{departments[activeDept].members.length} Active Members</span>
+          {/* Active Committee Recruitment Card */}
+          <div className="max-w-4xl mx-auto bg-slate-50/60 border border-slate-100 rounded-3xl p-8 sm:p-10 shadow-sm text-center">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 text-accent text-xs font-extrabold uppercase tracking-wider border border-teal-100 mb-4 animate-pulse">
+              <Building size={14} />
+              {departments[activeDept].name} — Now Hiring
+            </div>
+
+            <h3 className="font-display font-bold text-slate-900 text-2xl sm:text-3xl mb-3">
+              Join the {departments[activeDept].name}
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 animate-scale-up">
-              {departments[activeDept].members.map((member, i) => (
-                <div
-                  key={i}
-                  className="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:-translate-y-1 hover:border-slate-200 hover:shadow-md transition-all duration-300 flex flex-col justify-center h-28"
-                >
-                  <h4 className="font-display font-bold text-slate-900 text-xs sm:text-sm leading-snug">
-                    {member.name}
-                  </h4>
-                  <span className="text-accent text-[11px] font-semibold mt-0.5">
-                    {member.role}
+            <p className="text-slate-600 text-sm max-w-xl mx-auto leading-relaxed mb-8">
+              {departments[activeDept].description}
+            </p>
+
+            <div className="bg-white border border-slate-100 rounded-2xl p-6 max-w-2xl mx-auto mb-8 text-left">
+              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+                Open Roles in this Division
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {departments[activeDept].openRoles.map((role, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1.5 rounded-xl bg-slate-50 text-slate-700 font-semibold text-xs border border-slate-200/60 flex items-center gap-1.5"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                    {role}
                   </span>
-                  <span className="text-slate-450 text-[9px] uppercase font-bold tracking-wider mt-1 truncate">
-                    {member.school}
-                  </span>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/careers"
+                className="w-full sm:w-auto font-sans font-bold text-xs uppercase tracking-widest bg-accent hover:bg-accent-dark text-white px-8 py-3.5 rounded-xl transition-all shadow-md shadow-accent/10 hover:shadow-lg hover:shadow-accent/20"
+              >
+                Apply for Committee Roles
+              </Link>
             </div>
           </div>
-
         </div>
       </section>
 

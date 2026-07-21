@@ -109,118 +109,44 @@
       }
     ],
     "vicePresidents": [
-      { "name": "Sianne D'Souza", "role": "VP of Marketing", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/sianne.jpg" },
-      { "name": "Mark Lou", "role": "Chapter Manager", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/mark.jpg" },
-      { "name": "Owen Lee", "role": "VP of Marketing", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/owen.jpg" },
-      { "name": "Leanne Serrano", "role": "VP of Outreach", "school": "Saint Joseph C. S. S.", "image": "/assets/team/leanne.jpg" },
-      { "name": "Vyas Satish", "role": "VP of Operations", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/vyas.jpg" },
-      { "name": "Raghav Gopal", "role": "VP of Logistics", "school": "St. Francis Xavier C. S. S.", "image": "/assets/team/raghav.jpg" },
-      { "name": "Amrutha Gautam", "role": "VP of Educational Resources", "school": "Glen Forest High School", "image": "/assets/team/amrutha.jpg" },
+      { "role": "VP of Marketing", "department": "Marketing & Communications", "status": "Now Hiring" },
+      { "role": "VP of Operations", "department": "Finance & Operations", "status": "Now Hiring" },
+      { "role": "VP of Outreach", "department": "Outreach & Advocacy", "status": "Now Hiring" },
+      { "role": "VP of Logistics", "department": "Competitions Committee", "status": "Now Hiring" },
+      { "role": "VP of Educational Resources", "department": "Competitions Committee", "status": "Now Hiring" },
+      { "role": "VP of Public Relations", "department": "Marketing & Communications", "status": "Now Hiring" },
+      { "role": "Chapter Manager", "department": "Chapters Committee", "status": "Now Hiring" }
     ],
     "departments": [
       {
         "name": "Competitions Committee",
-        "members": [
-          { "name": "James Carter", "role": "Case Design Lead", "school": "Johns Hopkins University" },
-          { "name": "Emily Watson", "role": "Clinical Coordinator", "school": "Stanford University" },
-          { "name": "Aiden Gupta", "role": "Academic Quality Analyst", "school": "University of Chicago" },
-          { "name": "Olivia Martinez", "role": "Participant Liaison", "school": "UC Berkeley" },
-          { "name": "William Tan", "role": "Grading System Analyst", "school": "Yale University" },
-          { "name": "Sophia Lee", "role": "Diagnostics Director", "school": "UPenn" },
-          { "name": "Daniel Kim", "role": "Physiology Lead", "school": "Harvard University" },
-          { "name": "Mia Johnson", "role": "Bio-tech Case Writer", "school": "MIT" },
-          { "name": "Lucas Smith", "role": "Event Logistics Specialist", "school": "NYU" },
-          { "name": "Amelia Brown", "role": "Judge Coordinator", "school": "Duke University" },
-          { "name": "Ethan Davis", "role": "Case Auditor", "school": "UCLA" },
-          { "name": "Charlotte Miller", "role": "Score Verification Lead", "school": "Vanderbilt" },
-          { "name": "Henry Wilson", "role": "Simulation Specialist", "school": "Northwestern" },
-          { "name": "Harper Moore", "role": "Anatomy bowl Coordinator", "school": "Rice University" },
-          { "name": "Michael Taylor", "role": "Medical Advisory Liaison", "school": "Cornell University" },
-          { "name": "Evelyn Anderson", "role": "Committee Secretary", "school": "Dartmouth College" }
-        ]
+        "status": "Now Hiring",
+        "description": "Designing clinical case studies, anatomy bowl syllabi, and bio-innovation competition frameworks.",
+        "openRoles": ["Case Design Leads", "Clinical Coordinators", "Academic Quality Analysts", "Judge Coordinators"]
       },
       {
         "name": "Chapters Committee",
-        "members": [
-          { "name": "Noah Thomas", "role": "North America Regional Lead", "school": "Harvard University" },
-          { "name": "Abigail Garcia", "role": "Europe Regional Lead", "school": "Oxford University" },
-          { "name": "Mason Jackson", "role": "Asia Regional Lead", "school": "National University of Singapore" },
-          { "name": "Ella White", "role": "Chapter Onboarding Specialist", "school": "UC Berkeley" },
-          { "name": "Logan Harris", "role": "Startup Kit Coordinator", "school": "University of Michigan" },
-          { "name": "Avery Martin", "role": "High School Outreach Director", "school": "Stanford University" },
-          { "name": "Jack Thompson", "role": "Undergraduate Expansion Lead", "school": "UPenn" },
-          { "name": "Scarlett Martinez", "role": "Mentorship Program Lead", "school": "Johns Hopkins" },
-          { "name": "Jackson Robinson", "role": "Resources Library Manager", "school": "Yale University" },
-          { "name": "Chloe Clark", "role": "Chapter Audit Officer", "school": "University of Toronto" },
-          { "name": "Sebastian Rodriguez", "role": "Chapter Activities Lead", "school": "UT Austin" },
-          { "name": "Aria Lewis", "role": "Advisor Coordinator", "school": "Emory University" },
-          { "name": "Matthew Lee", "role": "Chapter Relations Officer", "school": "USC" },
-          { "name": "Grace Walker", "role": "Chapter Toolkits Designer", "school": "Boston University" },
-          { "name": "Joseph Hall", "role": "Outreach Specialist", "school": "UNC Chapel Hill" },
-          { "name": "Zoe Allen", "role": "Committee Secretary", "school": "University of Washington" }
-        ]
+        "status": "Now Hiring",
+        "description": "Expanding YMA globally, supporting local chapter startup kits, and managing regional mentorship programs.",
+        "openRoles": ["Regional Leads", "Chapter Onboarding Specialists", "Outreach Directors", "Chapter Relations Officers"]
       },
       {
         "name": "Marketing & Communications",
-        "members": [
-          { "name": "Samuel Young", "role": "Design Director", "school": "RISD / Brown" },
-          { "name": "Madison King", "role": "Social Media Manager", "school": "New York University" },
-          { "name": "Carter Wright", "role": "Brand Strategist", "school": "University of Southern California" },
-          { "name": "Lily Green", "role": "Copywriter", "school": "Northwestern University" },
-          { "name": "Ryan Baker", "role": "Content Creator", "school": "UC Berkeley" },
-          { "name": "Hannah Nelson", "role": "Newsletter Editor", "school": "Boston College" },
-          { "name": "Tyler Campbell", "role": "Video Producer", "school": "UCLA" },
-          { "name": "Natalie Carter", "role": "SEO Lead", "school": "University of Washington" },
-          { "name": "Dylan Mitchell", "role": "Graphic Designer", "school": "Carnegie Mellon" },
-          { "name": "Victoria Roberts", "role": "Press Relations Officer", "school": "Georgetown" },
-          { "name": "Christian Perez", "role": "Web Designer", "school": "MIT" },
-          { "name": "Lillian Turner", "role": "Community Engagement Lead", "school": "University of Virginia" },
-          { "name": "Jonathan Phillips", "role": "Email Marketing Specialist", "school": "University of Miami" },
-          { "name": "Samantha Parker", "role": "Marketing Auditor", "school": "Indiana University" },
-          { "name": "Aaron Evans", "role": "Media Planner", "school": "University of Oregon" },
-          { "name": "Stella Edwards", "role": "Communications Assistant", "school": "Syracuse University" }
-        ]
+        "status": "Now Hiring",
+        "description": "Crafting visual designs, managing social media channels, writing newsletters, and driving public relations.",
+        "openRoles": ["Design Directors", "Social Media Managers", "Copywriters", "Content Creators", "SEO Leads"]
       },
       {
         "name": "Finance & Operations",
-        "members": [
-          { "name": "Nathan Collins", "role": "Budget Analyst", "school": "University of Chicago" },
-          { "name": "Ellie Stewart", "role": "Donations Tracker", "school": "Stanford University" },
-          { "name": "Luke Morris", "role": "Compliance Officer", "school": "Yale University" },
-          { "name": "Audrey Rogers", "role": "Sponsorship Outreach Manager", "school": "UPenn" },
-          { "name": "Gabriel Reed", "role": "Event Treasurer", "school": "Columbia University" },
-          { "name": "Leah Cook", "role": "Procurement Officer", "school": "Johns Hopkins" },
-          { "name": "Owen Morgan", "role": "Logistics Coordinator", "school": "Georgia Tech" },
-          { "name": "Anna Bell", "role": "Accounting Associate", "school": "UC Berkeley" },
-          { "name": "Isaac Murphy", "role": "Platform Auditor", "school": "Harvard University" },
-          { "name": "Violet Bailey", "role": "Grants Coordinator", "school": "Duke University" },
-          { "name": "Julian Cooper", "role": "Risk Management Officer", "school": "NYU" },
-          { "name": "Hazel Ward", "role": "Corporate Relations Lead", "school": "Northwestern" },
-          { "name": "Levi Richardson", "role": "Fundraising Director", "school": "Vanderbilt" },
-          { "name": "Nora Cox", "role": "Operations Analyst", "school": "Rice University" },
-          { "name": "Eli Howard", "role": "Administrative Lead", "school": "Cornell University" },
-          { "name": "Bella Ward", "role": "Financial Assistant", "school": "UCLA" }
-        ]
+        "status": "Now Hiring",
+        "description": "Overseeing non-profit financial transparency, donation tracking, compliance, and corporate sponsorships.",
+        "openRoles": ["Budget Analysts", "Donations Trackers", "Compliance Officers", "Sponsorship Managers"]
       },
       {
         "name": "Outreach & Advocacy",
-        "members": [
-          { "name": "Caleb Gomez", "role": "Public Health Campaign Lead", "school": "Stanford University" },
-          { "name": "Nova Peterson", "role": "Diversity & Inclusion Chair", "school": "Johns Hopkins University" },
-          { "name": "Wyatt Gray", "role": "Global Health Partnerships Lead", "school": "UPenn" },
-          { "name": "Stella Ramirez", "role": "Advocacy Coordinator", "school": "Harvard University" },
-          { "name": "Isaiah Bryant", "role": "High School Liaison", "school": "Yale University" },
-          { "name": "Paisley Henderson", "role": "Community Service Coordinator", "school": "UC Berkeley" },
-          { "name": "Landon Foster", "role": "Underserved Clinics Partner", "school": "Emory University" },
-          { "name": "Sadie Powell", "role": "Webinar Series Director", "school": "Duke University" },
-          { "name": "Hunter Long", "role": "Resource Distribution Officer", "school": "UCLA" },
-          { "name": "Savannah Patterson", "role": "Advocacy Outreach Specialist", "school": "NYU" },
-          { "name": "Gavin Hughes", "role": "Mentorship Recruiter", "school": "Vanderbilt" },
-          { "name": "Skylar Flores", "role": "Educational Equity Analyst", "school": "UT Austin" },
-          { "name": "Jaxon Washington", "role": "Event Mobilizer", "school": "University of Michigan" },
-          { "name": "Alice Butler", "role": "Speaker Recruiter", "school": "Cornell University" },
-          { "name": "Miles Simmons", "role": "Community Organizer", "school": "University of Washington" }
-        ]
+        "status": "Now Hiring",
+        "description": "Leading global health initiatives, organizing webinars, and coordinating charity distribution funds.",
+        "openRoles": ["Public Health Campaign Leads", "Global Partnerships Leads", "Community Organizers"]
       }
     ]
   },
